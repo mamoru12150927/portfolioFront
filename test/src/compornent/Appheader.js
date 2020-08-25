@@ -1,23 +1,23 @@
 import React from 'react';
-import header from './css/header.css';
+import Button from './Button';
+import header from '../css/header.css'
+import Appfooter from './Appfooter.js';
+import LayOut from './layout';
 
 class Appheader extends React.Component {
   render() {
     return (
-    <>
-    <header className="header">
-      <nav>
-        <h1>
-          もっちゃんポートフォリオサイト
-        </h1>
-        <ul>
-          <a href="">自己紹介/PR</a>
-          <a href="">業務経歴</a>
-          <a href="">保有資格</a>
-        </ul>
-      </nav>
-    </header>
-    </>
+    <LayOut>
+      <header className="header">
+          <h1>もっちゃんポートフォリオサイト</h1>
+          <ul>
+            <li><Button href="/introduction" value="自己紹介"/></li>
+            <li><Button href="/frontend" value="フロントエンド実績"/></li>
+            <li><Button href="/backend" value="バックエンド実績"/></li>
+          </ul>
+      </header>
+      <Appfooter />
+    </LayOut>
     )
   }
 }
